@@ -1,5 +1,20 @@
 <h1>New article</h1>
- 
+
 <%= render 'form' %>
  
 <%= link_to 'Back', articles_path %>
+
+
+
+ 
+
+<%# Trying to get a real time counter
+    <div class="col-md-10">
+        @Html.EditorFor(model => model.Text, new { htmlAttributes = new { @class = "form-control", @onkeydown="WordCount()", @onchange="WordCount()" } })
+        @Html.ValidationMessageFor(model => model.Text, "", new { @class = "text-danger" })
+    </div>
+    <script>
+    function WordCount() {
+        document.getElementById("worbins").innerHTML = Math.floor(document.getElementById("Text").value.length / 1)
+    }
+</script> %>
