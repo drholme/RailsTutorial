@@ -1,2 +1,5 @@
 <h1>Hello, Rails!</h1>
-<!--<p>Find me in app/views/welcome/index.html.erb</p>-->
+<!--Link to all articles on Welcome Page-->
+<%= link_to 'My Blog', controller: 'articles' %>
+<!--Link to post new articles on welcome page -->
+<%= link_to 'New article', new_article_path %>
