@@ -1,17 +1,12 @@
 <h1>New article</h1>
 <h6 id="word-count-container"></h6>
 
-<%= render 'form', :onkeydown =>  "javascript:alert('event has been triggered');" %>
+<%= render 'form' %>
  
 <%= link_to 'Back', articles_path %>
 
 
 
-<script type="text/javascript">
-  function update_word_count(object) {
-    words = object.value.match(/\S+/g).length.toString();
-    document.getElementById('word-count-container').innerHTML = "Total Words: " + words;
-  }
-</script>
+
 
 
