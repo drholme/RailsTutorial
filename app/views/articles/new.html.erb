@@ -1,20 +1,17 @@
 <h1>New article</h1>
+<h6 id="word-count-container"></h6>
 
-<%= render 'form' %>
+<%= render 'form', :onkeydown =>  "javascript:alert('event has been triggered');" %>
  
 <%= link_to 'Back', articles_path %>
 
 
 
- 
+<script type="text/javascript">
+  function update_word_count(object) {
+    words = object.value.match(/\S+/g).length.toString();
+    document.getElementById('word-count-container').innerHTML = "Total Words: " + words;
+  }
+</script>
 
-<%# Trying to get a real time counter
-    <div class="col-md-10">
-        @Html.EditorFor(model => model.Text, new { htmlAttributes = new { @class = "form-control", @onkeydown="WordCount()", @onchange="WordCount()" } })
-        @Html.ValidationMessageFor(model => model.Text, "", new { @class = "text-danger" })
-    </div>
-    <script>
-    function WordCount() {
-        document.getElementById("worbins").innerHTML = Math.floor(document.getElementById("Text").value.length / 1)
-    }
-</script> %>
+

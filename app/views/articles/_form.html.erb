@@ -22,11 +22,10 @@
  
   <p>
     <%= form.label :text %><br>
-    <%= form.text_area :text %>
+    <%= form.text_area :text, :onkeydown => "update_word_count(this);" %>
   </p>
  
   <p>
     <%= form.submit %>
   </p>
- 
 <% end %>
