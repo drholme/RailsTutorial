@@ -15,17 +15,17 @@
     </div>
   <% end %>
  
-  <p>
+  <p class="mb-5">
     <%= form.label :title %><br>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, :class => 'form-control', :placeholder => 'Enter your title' %>
   </p>
  
-  <p>
+  <p class="mb-5">
     <%= form.label :text %><br>
-    <%= form.text_area :text, :onkeydown => "update_word_count(this);" %>
+    <%= form.text_area :text, :class=> 'form-control', :placeholder => 'Enter your text here', :onkeydown => "update_word_count(this);" %>
   </p>
  
-  <p>
-    <%= form.submit %>
+  <p class="mb-5">
+    <%= form.submit :class =>'btn btn-secondary' %>
   </p>
 <% end %>
